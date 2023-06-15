@@ -4,15 +4,26 @@
 
 
 
-# 多分支，同仓库，工作流程
+````
+## 目录
 
-## 克隆远端仓库
+* [多分支，同仓库，工作流程](#chapter-1)
+* [克隆远端仓库 ](#chapter-1-1)
+* [Fork 主仓库通过 Pull Request 协作流程](#chapter-2)
+```
+````
+
+
+
+# 1 多分支，同仓库，工作流程  {#chapter-1}
+
+## 1.1 克隆远端仓库 {#chapter-1-1}
 
 ```cpp
 git clone https://github.com/sorrowfeng/Branch-collaboration-test.git
 ```
 
-## main 分支的添加与提交操作
+## 1.2 main 分支的添加与提交操作 {#chapter-1-2}
 
 ```cpp
 git add "readme.md" // 添加文件
@@ -28,16 +39,16 @@ git push origin main // 推送commit到远端仓库
 >
 > 需要注意的是，`git commit -a` 命令只会将修改提交到本地仓库中，如果你想将修改推送到远程仓库中，还需要使用 `git push` 命令将本地分支推送到远程分支中。另外，建议在提交前仔细检查修改，确保提交的修改是符合要求的，以避免不必要的错误和问题。
 
-## 创建新分支进行工作的流程
+## 1.3 创建新分支进行工作的流程 {#chapter-1-3}
 
-### 拉取
+### 1.3.1 拉取 {#chapter-1-3-1}
 
 ```cpp
 git pull // 拉取远程最新内容
 git pull origin main
 ```
 
-### 创建并切换分支
+### 1.3.2 创建并切换分支 {#chapter-1-3-2}
 
 ```cpp
 git branch dev // 创建dev分支
@@ -46,14 +57,14 @@ git checkout dev // 切换到dev分支
 git checkout -b dev // 创建并切换到dev分支
 ```
 
-### 在分支上进行代码修改
+### 1.3.3 在分支上进行代码修改 {#chapter-1-3-3}
 
 ```cpp
 vim main.cpp // 修改代码
 git commit -a -m "dev changed" // 在分支上添加并提交
 ```
 
-### 合并到主分支
+### 1.3.4 合并到主分支 {#chapter-1-3-4}
 
 ``` cpp
 git checkout main // 切换到主分支
@@ -100,20 +111,20 @@ git merge dev // 合并dev分支
 >
 > 如果在解决冲突时遇到问题，可以使用 `git merge --abort` 命令取消合并操作。
 
-### 推送到远端
+### 1.3.5 推送到远端 {#chapter-1-3-5}
 
 ```cpp
 git branch -d dev // 删除dev分支
 git push origin main // 推送到远端仓库
 ```
 
-# Fork 主仓库通过 Pull Request 协作流程
+# 2 Fork 主仓库通过 Pull Request 协作流程{#chapter-2}
 
-## Fork 主仓库
+## 2.1 Fork 主仓库{#chapter-2-1}
 
 首先，每个贡献者都需要在 GitHub 上 Fork（派生）主仓库，这将创建一个该贡献者自己的副本。这个副本将作为该贡献者的“远程仓库”，他们将在其中进行更改和提交。
 
-## Clone 远程仓库
+## 2.2 Clone 远程仓库{#chapter-2-2}
 
 然后，贡献者需要将他们的远程仓库克隆到本地计算机上，这可以通过使用 `git clone` 命令来完成。例如：
 
@@ -121,7 +132,7 @@ git push origin main // 推送到远端仓库
 $ git clone git@github.com:<username>/<repo-name>.git
 ```
 
-## 创建新的分支
+## 2.3 创建新的分支{#chapter-2-3}
 
 贡献者应该在本地仓库中创建一个新的分支来进行更改。这可以通过使用 `git checkout` 命令来完成。例如：
 
@@ -129,11 +140,11 @@ $ git clone git@github.com:<username>/<repo-name>.git
 $ git checkout -b <new-branch-name>
 ```
 
-## 编辑代码
+## 2.4 编辑代码{#chapter-2-4}
 
 在本地仓库中进行更改和编辑，以满足要求。
 
-## 提交更改
+## 2.5 提交更改{#chapter-2-5}
 
 贡献者需要将更改提交到其本地仓库中，这可以通过使用 `git add` 和 `git commit` 命令来完成。例如：
 
@@ -142,7 +153,7 @@ $ git add .
 $ git commit -m "commit message"
 ```
 
-## 推送分支到远程仓库
+## 2.6 推送分支到远程仓库{#chapter-2-6}
 
 贡献者需要将其本地分支推送到其远程仓库中。这可以通过使用 `git push` 命令来完成。例如：
 
@@ -150,15 +161,15 @@ $ git commit -m "commit message"
 $ git push origin <new-branch-name>
 ```
 
-## 创建 Pull Request
+## 2.7 创建 Pull Request{#chapter-2-7}
 
 在贡献者的远程仓库中，他们可以创建一个 Pull Request（PR）来将其更改合并到主仓库中。他们可以通过 GitHub 界面或命令行工具完成此操作。
 
-## 审查和合并 Pull Request
+## 2.8 审查和合并 Pull Request{#chapter-2-8}
 
 维护主仓库的负责人现在可以审查 Pull Request，并将其合并到主仓库中。
 
-## 更新本地仓库
+## 2.9 更新本地仓库{#chapter-2-9}
 
 一旦主仓库中的更改被合并，贡献者应该更新其本地仓库以包含最新更改。这可以通过使用 `git pull` 命令来完成。例如：
 
