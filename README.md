@@ -4,14 +4,29 @@
 
 
 
-````
+
 ## 目录
 
-* [多分支，同仓库，工作流程](#chapter-1)
-* [克隆远端仓库 ](#chapter-1-1)
+* [多分支，同仓库，工作流程](#多分支，同仓库，工作流程)
+	* [克隆远端仓库 ](#克隆远端仓库)
+	* [main 分支的添加与提交操作 ](#chapter-1-2)
+	* [创建新分支进行工作的流程 ](#chapter-1-3)
+		* [拉取 ](#chapter-1-3-1)
+		* [创建并切换分支 ](#chapter-1-3-2)
+		* [在分支上进行代码修改 ](#chapter-1-3-3)
+		* [合并到主分支 ](#chapter-1-3-4)
+		* [推送到远端 ](#chapter-1-3-5)
 * [Fork 主仓库通过 Pull Request 协作流程](#chapter-2)
-```
-````
+	* [Fork 主仓库 ](#chapter-2-1)
+	* [Clone 远程仓库 ](#chapter-2-2)
+	* [创建新的分支 ](#chapter-2-3)
+	* [编辑代码 ](#chapter-2-4)
+	* [提交更改 ](#chapter-2-5)
+	* [推送分支到远程仓库 ](#chapter-2-6)
+	* [创建 Pull Request ](#chapter-2-7)
+	* [审查和合并 Pull Request ](#chapter-2-8)
+	* [更新本地仓库 ](#chapter-2-9)
+
 
 
 
