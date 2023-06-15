@@ -7,15 +7,15 @@
 
 ## 目录
 
-* [多分支，同仓库，工作流程](#多分支，同仓库，工作流程)
+* [多分支 同仓库 工作流程](#多分支-同仓库-工作流程)
 	* [克隆远端仓库](#克隆远端仓库)
-	* [main 分支的添加与提交操作 ](#chapter-1-2)
-	* [创建新分支进行工作的流程 ](#chapter-1-3)
-		* [拉取 ](#chapter-1-3-1)
-		* [创建并切换分支 ](#chapter-1-3-2)
-		* [在分支上进行代码修改 ](#chapter-1-3-3)
-		* [合并到主分支 ](#chapter-1-3-4)
-		* [推送到远端 ](#chapter-1-3-5)
+	* [main分支的添加与提交操作](#main分支的添加与提交操作)
+	* [创建新分支进行工作的流程](#创建新分支进行工作的流程)
+		* [拉取](#拉取)
+		* [创建并切换分支](#创建并切换分支)
+		* [在分支上进行代码修改](#在分支上进行代码修改)
+		* [合并到主分支](#合并到主分支)
+		* [推送到远端](#推送到远端)
 * [Fork 主仓库通过 Pull Request 协作流程](#chapter-2)
 	* [Fork 主仓库 ](#chapter-2-1)
 	* [Clone 远程仓库 ](#chapter-2-2)
@@ -30,15 +30,15 @@
 
 
 
-# 1 多分支，同仓库，工作流程
+# 多分支 同仓库 工作流程
 
-## 1.1 克隆远端仓库
+## 克隆远端仓库
 
 ```cpp
 git clone https://github.com/sorrowfeng/Branch-collaboration-test.git
 ```
 
-## 1.2 main 分支的添加与提交操作 {#chapter-1-2}
+## main分支的添加与提交操作
 
 ```cpp
 git add "readme.md" // 添加文件
@@ -54,16 +54,16 @@ git push origin main // 推送commit到远端仓库
 >
 > 需要注意的是，`git commit -a` 命令只会将修改提交到本地仓库中，如果你想将修改推送到远程仓库中，还需要使用 `git push` 命令将本地分支推送到远程分支中。另外，建议在提交前仔细检查修改，确保提交的修改是符合要求的，以避免不必要的错误和问题。
 
-## 1.3 创建新分支进行工作的流程 {#chapter-1-3}
+## 创建新分支进行工作的流程
 
-### 1.3.1 拉取 {#chapter-1-3-1}
+### 拉取
 
 ```cpp
 git pull // 拉取远程最新内容
 git pull origin main
 ```
 
-### 1.3.2 创建并切换分支 {#chapter-1-3-2}
+### 创建并切换分支
 
 ```cpp
 git branch dev // 创建dev分支
@@ -72,14 +72,14 @@ git checkout dev // 切换到dev分支
 git checkout -b dev // 创建并切换到dev分支
 ```
 
-### 1.3.3 在分支上进行代码修改 {#chapter-1-3-3}
+### 在分支上进行代码修改
 
 ```cpp
 vim main.cpp // 修改代码
 git commit -a -m "dev changed" // 在分支上添加并提交
 ```
 
-### 1.3.4 合并到主分支 {#chapter-1-3-4}
+### 合并到主分支
 
 ``` cpp
 git checkout main // 切换到主分支
@@ -126,7 +126,7 @@ git merge dev // 合并dev分支
 >
 > 如果在解决冲突时遇到问题，可以使用 `git merge --abort` 命令取消合并操作。
 
-### 1.3.5 推送到远端 {#chapter-1-3-5}
+### 推送到远端
 
 ```cpp
 git branch -d dev // 删除dev分支
