@@ -2,6 +2,8 @@
 
 int main()
 {
+	// hotfix 2
+
 	// finish the issue 05
 	std::cout << "finish the issue 05" << std::endl;
 
