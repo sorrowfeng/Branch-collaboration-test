@@ -26,7 +26,8 @@
 	* [创建 Pull Request](#创建-Pull-Request)
 	* [审查和合并 Pull Request](#审查和合并-Pull-Request)
 	* [更新本地仓库](#更新本地仓库)
-
+* [Git记录](#Git记录)
+	* [删除远端分支](#删除远端分支)
 
 
 
