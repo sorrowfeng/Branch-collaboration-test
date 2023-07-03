@@ -192,5 +192,11 @@ $ git push origin <new-branch-name>
 $ git pull origin master
 ```
 
+# Git记录
 
+## 删除远端分支
+
+```
+$ git push origin --delete <branch-name>
+```
 
